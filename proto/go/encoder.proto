@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package goencoderproto;
+
+option go_package = "github.com/aveitsme/goencoderproto;goencoderproto";
+
+// Encoder is a service for retrieving embedding based on input query;
+service Encoder {
+  // Create embedding based on text query.
+  rpc Encode (EncoderRequest) returns (EncoderResponse);
+}
+
+message EncoderRequest {
+    string query = 1; // The text query to create embedding.
+}
+
+message EncoderResponse {
+  repeated float embedding = 1; // Generated embedding.
+}
