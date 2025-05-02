@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.30.2
-// source: go/encoder.proto
+// source: encoder.proto
 
-package goencoderproto
+package encoderproto
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -30,7 +30,7 @@ type EncoderRequest struct {
 
 func (x *EncoderRequest) Reset() {
 	*x = EncoderRequest{}
-	mi := &file_go_encoder_proto_msgTypes[0]
+	mi := &file_encoder_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *EncoderRequest) String() string {
 func (*EncoderRequest) ProtoMessage() {}
 
 func (x *EncoderRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_go_encoder_proto_msgTypes[0]
+	mi := &file_encoder_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *EncoderRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EncoderRequest.ProtoReflect.Descriptor instead.
 func (*EncoderRequest) Descriptor() ([]byte, []int) {
-	return file_go_encoder_proto_rawDescGZIP(), []int{0}
+	return file_encoder_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *EncoderRequest) GetQuery() string {
@@ -74,7 +74,7 @@ type EncoderResponse struct {
 
 func (x *EncoderResponse) Reset() {
 	*x = EncoderResponse{}
-	mi := &file_go_encoder_proto_msgTypes[1]
+	mi := &file_encoder_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -86,7 +86,7 @@ func (x *EncoderResponse) String() string {
 func (*EncoderResponse) ProtoMessage() {}
 
 func (x *EncoderResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_go_encoder_proto_msgTypes[1]
+	mi := &file_encoder_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -99,7 +99,7 @@ func (x *EncoderResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EncoderResponse.ProtoReflect.Descriptor instead.
 func (*EncoderResponse) Descriptor() ([]byte, []int) {
-	return file_go_encoder_proto_rawDescGZIP(), []int{1}
+	return file_encoder_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *EncoderResponse) GetEmbedding() []float32 {
@@ -109,38 +109,38 @@ func (x *EncoderResponse) GetEmbedding() []float32 {
 	return nil
 }
 
-var File_go_encoder_proto protoreflect.FileDescriptor
+var File_encoder_proto protoreflect.FileDescriptor
 
-const file_go_encoder_proto_rawDesc = "" +
+const file_encoder_proto_rawDesc = "" +
 	"\n" +
-	"\x10go/encoder.proto\x12\x0egoencoderproto\"&\n" +
+	"\rencoder.proto\x12\fencoderproto\"&\n" +
 	"\x0eEncoderRequest\x12\x14\n" +
 	"\x05query\x18\x01 \x01(\tR\x05query\"/\n" +
 	"\x0fEncoderResponse\x12\x1c\n" +
-	"\tembedding\x18\x01 \x03(\x02R\tembedding2T\n" +
-	"\aEncoder\x12I\n" +
-	"\x06Encode\x12\x1e.goencoderproto.EncoderRequest\x1a\x1f.goencoderproto.EncoderResponseB3Z1github.com/aveitsme/goencoderproto;goencoderprotob\x06proto3"
+	"\tembedding\x18\x01 \x03(\x02R\tembedding2P\n" +
+	"\aEncoder\x12E\n" +
+	"\x06Encode\x12\x1c.encoderproto.EncoderRequest\x1a\x1d.encoderproto.EncoderResponseB/Z-github.com/aveitsme/encoderproto;encoderprotob\x06proto3"
 
 var (
-	file_go_encoder_proto_rawDescOnce sync.Once
-	file_go_encoder_proto_rawDescData []byte
+	file_encoder_proto_rawDescOnce sync.Once
+	file_encoder_proto_rawDescData []byte
 )
 
-func file_go_encoder_proto_rawDescGZIP() []byte {
-	file_go_encoder_proto_rawDescOnce.Do(func() {
-		file_go_encoder_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_go_encoder_proto_rawDesc), len(file_go_encoder_proto_rawDesc)))
+func file_encoder_proto_rawDescGZIP() []byte {
+	file_encoder_proto_rawDescOnce.Do(func() {
+		file_encoder_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_encoder_proto_rawDesc), len(file_encoder_proto_rawDesc)))
 	})
-	return file_go_encoder_proto_rawDescData
+	return file_encoder_proto_rawDescData
 }
 
-var file_go_encoder_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_go_encoder_proto_goTypes = []any{
-	(*EncoderRequest)(nil),  // 0: goencoderproto.EncoderRequest
-	(*EncoderResponse)(nil), // 1: goencoderproto.EncoderResponse
+var file_encoder_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_encoder_proto_goTypes = []any{
+	(*EncoderRequest)(nil),  // 0: encoderproto.EncoderRequest
+	(*EncoderResponse)(nil), // 1: encoderproto.EncoderResponse
 }
-var file_go_encoder_proto_depIdxs = []int32{
-	0, // 0: goencoderproto.Encoder.Encode:input_type -> goencoderproto.EncoderRequest
-	1, // 1: goencoderproto.Encoder.Encode:output_type -> goencoderproto.EncoderResponse
+var file_encoder_proto_depIdxs = []int32{
+	0, // 0: encoderproto.Encoder.Encode:input_type -> encoderproto.EncoderRequest
+	1, // 1: encoderproto.Encoder.Encode:output_type -> encoderproto.EncoderResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -148,26 +148,26 @@ var file_go_encoder_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_go_encoder_proto_init() }
-func file_go_encoder_proto_init() {
-	if File_go_encoder_proto != nil {
+func init() { file_encoder_proto_init() }
+func file_encoder_proto_init() {
+	if File_encoder_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_go_encoder_proto_rawDesc), len(file_go_encoder_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_encoder_proto_rawDesc), len(file_encoder_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_go_encoder_proto_goTypes,
-		DependencyIndexes: file_go_encoder_proto_depIdxs,
-		MessageInfos:      file_go_encoder_proto_msgTypes,
+		GoTypes:           file_encoder_proto_goTypes,
+		DependencyIndexes: file_encoder_proto_depIdxs,
+		MessageInfos:      file_encoder_proto_msgTypes,
 	}.Build()
-	File_go_encoder_proto = out.File
-	file_go_encoder_proto_goTypes = nil
-	file_go_encoder_proto_depIdxs = nil
+	File_encoder_proto = out.File
+	file_encoder_proto_goTypes = nil
+	file_encoder_proto_depIdxs = nil
 }

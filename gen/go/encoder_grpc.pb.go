@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v6.30.2
-// source: go/encoder.proto
+// source: encoder.proto
 
-package goencoderproto
+package encoderproto
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Encoder_Encode_FullMethodName = "/goencoderproto.Encoder/Encode"
+	Encoder_Encode_FullMethodName = "/encoderproto.Encoder/Encode"
 )
 
 // EncoderClient is the client API for Encoder service.
@@ -114,7 +114,7 @@ func _Encoder_Encode_Handler(srv interface{}, ctx context.Context, dec func(inte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Encoder_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "goencoderproto.Encoder",
+	ServiceName: "encoderproto.Encoder",
 	HandlerType: (*EncoderServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -123,5 +123,5 @@ var Encoder_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "go/encoder.proto",
+	Metadata: "encoder.proto",
 }

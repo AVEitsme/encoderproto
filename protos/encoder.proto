@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package goencoderproto;
+package encoderproto;
 
-option go_package = "github.com/aveitsme/goencoderproto;goencoderproto";
+option go_package = "github.com/aveitsme/encoderproto;encoderproto";
 
 // Encoder is a service for retrieving embedding based on input query;
 service Encoder {
